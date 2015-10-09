@@ -30,7 +30,7 @@
                 formData[_.capitalize(input.id.replace('-' + modelId, ''))] = input.value;
             }
             _.each($formFields, serializeFormData, this);
-            //this.model.set(formData);
+            formData.shortDescription = this.truncate(formData.fullDescription);
 
             /*this.model.save(formData)
                 .done(function() {
@@ -41,8 +41,6 @@
                 .fail(function () {
                     alert('fail');
                 });*/
-            /*'shortDescription':
-            this.truncate(this.model.get('fullDescription'))*/
             this.model.save(formData, {
                 success: function () {
                     this.cancelEdit();
