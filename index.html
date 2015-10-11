@@ -57,6 +57,16 @@
             </li>
         </ul>
     </script>
+    <script type="text/html" id="single-book-detailed-template">
+        <ul class="library-book">
+            <li class="library-book__property">Книга: <%= book %></li>
+            <li class="library-book__property">Автор: <%= author %></li>
+            <li class="library-book__property">Год издания: <%= publishYear %></li>
+            <li class="library-book__property">Издательство: <%=
+                                               publishHouse %></li>
+            <li class="library-book__property">Описание: <%= fullDescription %></li>
+        </ul>
+    </script>
     <script type="text/html" id="edit-form-template">
         <label class="book-form__label">
             <span class="book-form__label-text">Книга: </span>
@@ -97,10 +107,12 @@
     <script src="js/collections/LibraryCollection.js"></script>
     <script src="js/views/BaseView.js"></script>
     <script src="js/views/BookView.js"></script>
+    <script src="js/views/BookViewDetailed.js"></script>
     <script src="js/views/EditView.js"></script>
     <script src="js/views/LibraryView.js"></script>
     <script src="js/views/FormView.js"></script>
     <script src="js/views/AppView.js"></script>
+    <!--<script src="js/controllers/AppController.js"></script>-->
     <script src="app.js"></script>
     <!--<link rel="stylesheet" type="text/css" href="dist/style.min.css">-->
     <link rel="stylesheet" type="text/css" href="css/style.css">

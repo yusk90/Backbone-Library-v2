@@ -24,13 +24,13 @@
             $element[action]('button--disabled');
         },
         close: function () {
-            this.remove();
-            this.unbind();
             if (this.childViews) {
                 _.each(this.childViews, function (childView) {
                     childView.close();
                 });
             }
+            this.remove();
+            this.unbind();
         }
     })
 })(app);

@@ -8,13 +8,14 @@
             //this.appView = new app.AppView();
         },
         renderBook: function (id) {
-            //$('#book-form, #library-list').hide();
+            //app.appViews.close();
             Backbone.trigger('close-library');
+            Backbone.trigger('show-book', id);
         },
         indexPage: function () {
-            //$('#book-form, #library-list').show();
-            //this.appView.addAll();
-            //Backbone.trigger('render-library');
+            Backbone.trigger('render-index-page');
+            //app.appViews.renderLibrary();
+            //app.AppController.renderLibrary();
         }
     })
 })(app);
